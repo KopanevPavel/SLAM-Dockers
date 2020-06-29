@@ -31,7 +31,7 @@ sleep 1
 
 OPEN_VINS_DIR=$(abspath "..")
 
-rviz -d ${OPEN_VINS_DIR}/docker/display.rviz &
+rviz -d ${OPEN_VINS_DIR}/display.rviz &
 RVIZ_PID=$!
 
 docker run \
