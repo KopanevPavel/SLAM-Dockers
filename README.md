@@ -1,6 +1,12 @@
 # OpenVINS-docker
 Docker for [OpenVINS](https://github.com/rpng/open_vins) VIO. Note that ROS master will run on the host PC and OpenVINS will run in the container and publish all topics to the host PC.
 
+To pull image from Docker Hub:
+
+```
+make
+```
+
 To run the simulation from the examples:
 
 ```
