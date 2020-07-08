@@ -36,25 +36,72 @@ docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -h $HOSTNAME -v 
 ```
 
 ## VINS-Mono
-Docker for [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono) - An optimization-based multi-sensor state estimator
+Docker for [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono) - An optimization-based multi-sensor state estimator.
+
+You need to put this folder into your project (as it was done in the original repo), or modify Dockerfile (to clone repo into the container)
+
+Run container:
+```sh
+make build
+
+./run.sh LAUNCH_FILE_NAME   # ./run.sh euroc.launch
+```
 
 ## VINS-Fusion
-Docker for [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) - An optimization-based multi-sensor state estimator
+Docker for [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) - An optimization-based multi-sensor state estimator.
+
+You need to put this folder into your project (as it was done in the original repo), or modify Dockerfile (to clone repo into the container)
+
+Run container:
+```sh
+make build
+
+# Euroc Monocualr camera + IMU
+./run.sh ~/catkin_ws/src/VINS-Fusion/config/euroc/euroc_mono_imu_config.yaml
+
+# Euroc Stereo cameras + IMU with loop fusion
+./run.sh -l ~/catkin_ws/src/VINS-Fusion/config/euroc/euroc_mono_imu_config.yaml
+
+# KITTI Odometry (Stereo)
+./run.sh -k ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config00-02.yaml YOUR_DATASET_FOLDER/sequences/00/
+
+# KITTI Odometry (Stereo) with loop fusion
+./run.sh -kl ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config00-02.yaml YOUR_DATASET_FOLDER/sequences/00/
+
+#  KITTI GPS Fusion (Stereo + GPS)
+./run.sh -kg ~/catkin_ws/src/VINS-Fusion/config/kitti_raw/kitti_10_03_config.yaml YOUR_DATASET_FOLDER/2011_10_03_drive_0027_sync/
+```
 
 ## OpenVINS
 Docker for [OpenVINS](https://github.com/rpng/open_vins) VIO. Note that ROS master will run on the host PC and OpenVINS will run in the container and publish all topics to the host PC.
 
-To pull image from Docker Hub:
-
-```
-make
+Possible commands (building, pulling, cleaning):
+```sh
+make help
 ```
 
 To run the simulation from the examples:
 
-```
+```sh
 ./run.sh pgeneva_serial_eth.launch
 ```
 
 ## VIORB
 Docker for [VIORB](https://github.com/jingpang/LearnVIORB) - Visual Inertial ORB SLAM based on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2)
+Possible commands (building, pulling, cleaning):
+```sh
+make help
+```
+
+To run the container:
+
+```sh
+./run.sh
+```
+
+Then inside the container:
+```sh
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:$CATKIN_WS/src/Examples/ROS 
+roslaunch ORB_VIO testeuroc.launch
+```
+
