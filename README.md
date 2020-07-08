@@ -5,7 +5,9 @@ Dockerfiles for some SOTA SLAM algorithms (mainly Visual Inertial Odometry with 
 ## Kimera
 Docker for [Kimera-VIO](https://github.com/MIT-SPARK/Kimera-VIO-ROS) - Visual Inertial Odometry with SLAM capabilities and 3D Mesh generation.
 
-![Kimera](https://img.shields.io/docker/pulls/kopanev/kimera)
+![](https://img.shields.io/docker/pulls/kopanev/kimera)
+![](https://img.shields.io/docker/cloud/automated/kopanev/kimera)
+![](https://img.shields.io/docker/cloud/build/kopanev/kimera)
 
 Possible commands (building, pulling, cleaning):
 ```sh
@@ -19,7 +21,9 @@ Run container:
 ## Maplab 
 Docker for [Maplab](https://github.com/ethz-asl/maplab) - An open visual-inertial mapping framework. Dockerfile was created using [this](https://github.com/sofwerx/docker-maplab).
 
-![Maplab](https://img.shields.io/docker/pulls/kopanev/maplab)
+![](https://img.shields.io/docker/pulls/kopanev/maplab)
+![](https://img.shields.io/docker/cloud/automated/kopanev/maplab)
+![](https://img.shields.io/docker/cloud/build/kopanev/maplab)
 
 To run, use make:
 ```sh
@@ -79,7 +83,9 @@ make build
 ## OpenVINS
 Docker for [OpenVINS](https://github.com/rpng/open_vins) VIO. Note that ROS master will run on the host PC and OpenVINS will run in the container and publish all topics to the host PC.
 
-![OpenVINS](https://img.shields.io/docker/pulls/kopanev/openvins)
+![](https://img.shields.io/docker/pulls/kopanev/openvins)
+![](https://img.shields.io/docker/cloud/automated/kopanev/openvins)
+![](https://img.shields.io/docker/cloud/build/kopanev/openvins)
 
 Possible commands (building, pulling, cleaning):
 ```sh
@@ -95,7 +101,9 @@ To run the simulation from the examples:
 ## VIORB
 Docker for [VIORB](https://github.com/jingpang/LearnVIORB) - Visual Inertial ORB SLAM based on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2)
 
-![VIORB](https://img.shields.io/docker/pulls/kopanev/viorb)
+![](https://img.shields.io/docker/pulls/kopanev/viorb)
+![](https://img.shields.io/docker/cloud/automated/kopanev/viorb)
+![](https://img.shields.io/docker/cloud/build/kopanev/viorb)
 
 Possible commands (building, pulling, cleaning):
 ```sh
