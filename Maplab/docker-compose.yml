@@ -1,0 +1,19 @@
+version: '2.1'
+
+services:
+
+  maplab:
+    build: .
+    image: kopanev/maplab
+    container_name: maplab
+    hostname: maplab
+    ports:
+      - 8090:8090
+      - 11311:11311
+    environment:
+      DISPLAY: ${DISPLAY}
+      ROSCORE_PORT: 11311
+      ROS_HOSTNAME: localhost
+      ROS_MASTER_URI: http://localhost:11311
+    volumes:
+      - ./volumes/.Xauthority:/root/.Xauthority
