@@ -1,3 +1,21 @@
-# Pull the container image from the Docker registry
+all: help
+
+help:
+	@echo ""
+	@echo "------------------- Help Menu ------------------------"
+	@echo ""
+	@echo "     1. make build             - build all images"
+	@echo "     2. make pull              - pull all images"
+	@echo "     3. make clean             - remove all images"
+	@echo ""
+	@echo "------------------------------------------------------"
+	@echo ""
+
+build:
+	@docker build --tag kopanev/openvins:version2 -f ./Dockerfile ..
+
 pull:
-	docker pull kopanev/openvins:version2
+	@docker pull kopanev/openvins:version2
+
+clean:
+	@docker rmi -f kopanev/openvins:version2
