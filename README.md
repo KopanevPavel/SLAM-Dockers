@@ -2,6 +2,7 @@
 Dockerfiles for some SOTA SLAM algorithms (mainly Visual Inertial Odometry with SLAM capabilities). Compiled images could be found [here](https://hub.docker.com/u/kopanev).
 
 # Available algorithms
+*PS some dockerfiles fail to compile automatically due to the big size or building is in progress*
 ## Kimera
 Docker for [Kimera-VIO](https://github.com/MIT-SPARK/Kimera-VIO-ROS) - Visual Inertial Odometry with SLAM capabilities and 3D Mesh generation.
 
@@ -37,14 +38,14 @@ docker pull kopanev/maplab:version3
 ```
 This version includes CLion and vim for development.
 
-Run container this command (don't forget about command xhost + for X11 server): 
+Run container using this command: 
 ```sh
 xhost +
 docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -h $HOSTNAME -v $HOME/.Xauthority:/home/lyonn/.Xauthority kopanev/maplab:version3
 ```
 
 ## VINS-Mono
-Docker for [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono) - An optimization-based multi-sensor state estimator.
+Docker for [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono) - A Robust and Versatile Monocular Visual-Inertial State Estimator.
 
 You need to put this folder into your project (as it was done in the original repo), or modify Dockerfile (to clone repo into the container)
 
@@ -81,7 +82,7 @@ make build
 ```
 
 ## OpenVINS
-Docker for [OpenVINS](https://github.com/rpng/open_vins) VIO. Note that ROS master will run on the host PC and OpenVINS will run in the container and publish all topics to the host PC.
+Docker for [OpenVINS](https://github.com/rpng/open_vins) - An open source platform for visual-inertial navigation research. Note that this container launches with flag --net=host (gives the container full access to local system services such as D-bus and is therefore considered insecure). ROS master will run on the host PC and will see all topics published in the container.
 
 ![](https://img.shields.io/docker/pulls/kopanev/openvins)
 ![](https://img.shields.io/docker/cloud/automated/kopanev/openvins)
@@ -99,7 +100,7 @@ To run the simulation from the examples:
 ```
 
 ## VIORB
-Docker for [VIORB](https://github.com/jingpang/LearnVIORB) - Visual Inertial ORB SLAM based on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2)
+Docker for [VIORB](https://github.com/jingpang/LearnVIORB) - Visual Inertial ORB SLAM based on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2).
 
 ![](https://img.shields.io/docker/pulls/kopanev/viorb)
 ![](https://img.shields.io/docker/cloud/automated/kopanev/viorb)
