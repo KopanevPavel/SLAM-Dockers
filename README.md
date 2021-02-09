@@ -133,5 +133,20 @@ make help
 To run the container:
 ```sh
 xhost +local
-docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix:ro openvslam-desktop
+docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix:ro ros:openvslam
+```
+
+## ORB_SLAM2
+
+Pull docker [image](https://hub.docker.com/r/youyu/orb_slam2/tags?page=1&ordering=last_updated): 
+```sh
+docker pull youyu/orb_slam2:ubuntu18
+```
+([this](https://github.com/yuyou/ORB_SLAM2) fork is used)
+
+To run the container:
+```sh
+xhost +local:
+sudo docker run --name orb -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+youyu/orb_slam2:ubuntu18
 ```
