@@ -123,3 +123,15 @@ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:$CATKIN_WS/src/Examples/ROS
 roslaunch ORB_VIO testeuroc.launch
 ```
 
+## OpenVSLAM
+
+Possible commands (building, pulling, cleaning):
+```sh
+make help
+```
+
+To run the container:
+```sh
+xhost +local
+docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix:ro openvslam-desktop
+```
