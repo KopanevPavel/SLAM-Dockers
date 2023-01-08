@@ -1,7 +1,7 @@
 # Description 
 Dockerfiles for some SOTA SLAM algorithms (mainly Visual Inertial Odometry with SLAM capabilities). Compiled images could be found [here](https://hub.docker.com/u/kopanev).
 
-The repository is part of the publication which is under consideration in the Autonomous Robots journal. 
+The repository is part of the publication which is under consideration in the Journal of Intelligent & Robotic System. 
 
 Sharafutdinov, D., Griguletskii, M., Kopanev, P., Kurenkov, M., Ferrer, G., Burkov, A., Gonnochenko, A., & Tsetserukou, D. (2021). **Comparison of modern open-source visual SLAM approaches**. arXiv preprint arXiv:2108.01654. [PDF](https://arxiv.org/pdf/2108.01654.pdf).
 
