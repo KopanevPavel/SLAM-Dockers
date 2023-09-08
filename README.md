@@ -8,12 +8,15 @@ Sharafutdinov, D., Griguletskii, M., Kopanev, P., Kurenkov, M., Ferrer, G., Burk
 If you use this repo in academic work, please cite:
 
 
-    @article{sharafutdinov2021comparison,
+    @article{sharafutdinov2023comparison,
       title={Comparison of modern open-source visual SLAM approaches},
-      author={Sharafutdinov, Dinar and Griguletskii, Mark and Kopanev, Pavel and Kurenkov, Mikhail 
-              and Ferrer, Gonzalo and Burkov, Aleksey and Gonnochenko, Aleksei and Tsetserukou, Dzmitry},
-      journal={arXiv preprint arXiv:2108.01654},
-      year={2021}
+      author={Sharafutdinov, Dinar and Griguletskii, Mark and Kopanev, Pavel and Kurenkov, Mikhail and Ferrer, Gonzalo and Burkov, Aleksey and Gonnochenko, Aleksei and Tsetserukou, Dzmitry},
+      journal={Journal of Intelligent \& Robotic Systems},
+      volume={107},
+      number={3},
+      pages={43},
+      year={2023},
+      publisher={Springer}
     }
 
 # Available algorithms
